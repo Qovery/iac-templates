@@ -1,21 +1,35 @@
-# Qovery Terraform Examples
+# Qovery IaC Templates
 
-This repository contains ready to use Terraform [examples](/examples) with Qovery to create outstanding cloud infrastructure. Feel free to
-use them, modify them and share them with us and [our community](https://discuss.qovery.com).
+This repository contains ready to use Infrastructure as Code (IaC) [examples](/examples) with Qovery to create outstanding cloud infrastructure. The templates are compatible with **Terraform** and **OpenTofu**. Feel free to use them, modify them and share them with us and [our community](https://discuss.qovery.com).
 
 > Watch our live session on [How Getting Started with Terraform and Qovery on AWS](https://www.youtube.com/watch?v=l8D6IrEoIgw)
 
 ## Usage
 
-1. [Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+### With Terraform
+
+1. [Install Terraform](https://developer.hashicorp.com/terraform/install)
 2. Clone this repository
 3. Go to the [examples](examples) folder
-4. Pick the example you want and follow the instructions.
+4. Pick the example you want and follow the instructions
+
+### With OpenTofu
+
+1. [Install OpenTofu](https://opentofu.org/docs/intro/install/)
+2. Clone this repository
+3. Go to the [examples](examples) folder
+4. Pick the example you want and follow the instructions
+5. Use `tofu` command instead of `terraform` (e.g., `tofu init`, `tofu plan`, `tofu apply`)
+
+> **Note:** OpenTofu is a fork of Terraform and maintains compatibility with Terraform's HCL syntax. All examples in this repository work with both tools.
 
 ## Documentation
 
 * [Qovery Terraform provider](https://registry.terraform.io/providers/Qovery/qovery/latest)
+* [Qovery OpenTofu provider](https://github.com/opentofu/registry/blob/main/providers/q/qovery/qovery.md)
 * [Qovery Documentation](https://hub.qovery.com)
+* [Terraform Documentation](https://developer.hashicorp.com/terraform/docs)
+* [OpenTofu Documentation](https://opentofu.org/docs/)
 
 ## Examples
 

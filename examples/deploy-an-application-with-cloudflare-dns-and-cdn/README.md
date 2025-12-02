@@ -1,11 +1,13 @@
 # Deploy an Application with Cloudflare DNS and CDN
 
-This ready to use example show you how to deploy an application from GitHub on AWS and make it accessible via a custom domain and HTTPS. All of that in just a few lines of Terraform file.
+This ready to use example show you how to deploy an application from GitHub on AWS and make it accessible via a custom domain and HTTPS. All of that in just a few lines of IaC configuration (compatible with both Terraform and OpenTofu).
 
-Terraform providers used:
+IaC providers used:
 
-- [Cloudflare](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs)
-- [Qovery](https://registry.terraform.io/providers/qovery/qovery/latest/docs)
+- [Cloudflare Terraform provider](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs)
+- [Cloudflare OpenTofu provider](https://github.com/opentofu/registry/blob/main/providers/c/cloudflare/cloudflare.md)
+- [Qovery Terraform provider](https://registry.terraform.io/providers/qovery/qovery/latest/docs)
+- [Qovery OpenTofu provider](https://github.com/opentofu/registry/blob/main/providers/q/qovery/qovery.md)
 
 
 ## Behind the scene
@@ -45,7 +47,9 @@ TF_VAR_qovery_organization_id=YOUR_QOVERY_ORG_ID
 
 6. Clone my [URL Shortener application](https://github.com/evoxmusic/ShortMe-URL-Shortener.git)
 7. Edit the `main.tf` file and change `https://github.com/evoxmusic/ShortMe-URL-Shortener.git` with yours
-8. You can now run the Terraform commands
+8. You can now run the Terraform or OpenTofu commands
+
+**With Terraform:**
 
 ```shell
 terraform init
@@ -59,5 +63,19 @@ terraform plan
 terraform apply
 ```
 
+**With OpenTofu:**
+
+```shell
+tofu init
+```
+
+```shell
+tofu plan
+```
+
+```shell
+tofu apply
+```
+
 7. Open your Qovery console to find out the HTTPS URL of your deployed app.
-8. To tear down your infrastructure and avoid unnecessary cloud costs you can run `terraform destroy`.
+8. To tear down your infrastructure and avoid unnecessary cloud costs you can run `terraform destroy` (or `tofu destroy` if using OpenTofu).

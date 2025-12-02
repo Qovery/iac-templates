@@ -1,10 +1,11 @@
 # Deploy a cron job
 
-This ready to use example show you how to deploy a cron job from GitHub (and from an image) on AWS. All of that in just a few lines of Terraform file.
+This ready to use example show you how to deploy a cron job from GitHub (and from an image) on AWS. All of that in just a few lines of IaC configuration (compatible with both Terraform and OpenTofu).
 
-Terraform providers used:
+IaC providers used:
 
-- [Qovery](https://registry.terraform.io/providers/qovery/qovery/latest/docs)
+- [Qovery Terraform provider](https://registry.terraform.io/providers/qovery/qovery/latest/docs)
+- [Qovery OpenTofu provider](https://github.com/opentofu/registry/blob/main/providers/q/qovery/qovery.md)
 
 
 ## Behind the scene
@@ -44,7 +45,9 @@ TF_VAR_qovery_organization_id=YOUR_QOVERY_ORG_ID
 - Resource `resource "qovery_job" "cron-job"` field `source.git_repository.url` (=`https://github.com/Qovery/terraform-provider-testing.git`) with yours
 - Resource `resource "qovery_job" "cron-job"` field `source.git_repository.branch` (=`job-echo-n-seconds`) with yours
 8. Edit the ``
-8. You can now run the Terraform commands
+8. You can now run the Terraform or OpenTofu commands
+
+**With Terraform:**
 
 ```shell
 terraform init
@@ -58,5 +61,19 @@ terraform plan
 terraform apply
 ```
 
+**With OpenTofu:**
+
+```shell
+tofu init
+```
+
+```shell
+tofu plan
+```
+
+```shell
+tofu apply
+```
+
 7. Open your Qovery console to find out the newly created cron job.
-8. To tear down your infrastructure and avoid unnecessary cloud costs you can run `terraform destroy`.
+8. To tear down your infrastructure and avoid unnecessary cloud costs you can run `terraform destroy` (or `tofu destroy` if using OpenTofu).

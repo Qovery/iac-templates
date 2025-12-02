@@ -24,7 +24,9 @@ TF_VAR_qovery_organization_id=YOUR_QOVERY_ORG_ID
 
 6. Clone my [URL Shortener application](https://github.com/evoxmusic/ShortMe-URL-Shortener.git)
 7. Edit the `main.tf` file and change `https://github.com/evoxmusic/ShortMe-URL-Shortener.git` with yours
-8. You can now run the Terraform commands
+8. You can now run the Terraform or OpenTofu commands
+
+**With Terraform:**
 
 ```shell
 terraform init
@@ -38,5 +40,19 @@ terraform plan
 terraform apply
 ```
 
+**With OpenTofu:**
+
+```shell
+tofu init
+```
+
+```shell
+tofu plan
+```
+
+```shell
+tofu apply
+```
+
 7. Open your Qovery console to find out the HTTPS URL of your deployed app.
-8. To tear down your infrastructure and avoid unnecessary cloud costs you can run `terraform destroy`.
+8. To tear down your infrastructure and avoid unnecessary cloud costs you can run `terraform destroy` (or `tofu destroy` if using OpenTofu).

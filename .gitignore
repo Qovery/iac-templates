@@ -107,3 +107,21 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+### OpenTofu template
+# Local .tofu directories
+**/.tofu/*
+
+# .tfstate files (OpenTofu uses the same format)
+# Already covered above
+
+# OpenTofu crash log files
+# Already covered above
+
+# OpenTofu lock files (if different from Terraform)
+.terraform.lock.hcl
+.tofu.lock.hcl
+
+# OpenTofu CLI configuration files
+.tofurc
+tofu.rc
+
