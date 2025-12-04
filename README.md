@@ -39,6 +39,11 @@ Here is a list of all the examples
 | ----------------------------------------- | ----------------------------------------------- |
 | Deploy CloudFront + S3 with Terraform     | [here](/examples/aws/cdn/cloudfront-s3)         |
 
+#### Compute
+| Description                               | Folder                                          |
+| ----------------------------------------- | ----------------------------------------------- |
+| Deploy AWS EC2     | [here](/examples/aws/compute/ec2)         |
+
 ### GCP Examples
 
 #### Database
