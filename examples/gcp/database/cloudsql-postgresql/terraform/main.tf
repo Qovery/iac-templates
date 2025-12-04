@@ -53,7 +53,7 @@ resource "google_sql_database_instance" "postgresql" {
     ip_configuration {
       ipv4_enabled    = var.ipv4_enabled
       private_network = var.private_network
-      ssl_mode    = var.ssl_mode
+      ssl_mode        = var.ssl_mode
 
       dynamic "authorized_networks" {
         for_each = var.authorized_networks
