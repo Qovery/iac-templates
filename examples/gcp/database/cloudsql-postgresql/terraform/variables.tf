@@ -92,10 +92,10 @@ variable "private_network" {
   default     = null
 }
 
-variable "require_ssl" {
+variable "ssl_mode" {
   description = "Require SSL for connections"
-  type        = bool
-  default     = false
+  type        = string
+  default     = "ALLOW_UNENCRYPTED_AND_ENCRYPTED"
 }
 
 variable "authorized_networks" {
