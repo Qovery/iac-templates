@@ -50,6 +50,12 @@ Here is a list of all the examples
 | Description                               | Folder                                          |
 | ----------------------------------------- | ----------------------------------------------- |
 | Deploy Cloud Storage bucket with Terraform| [here](/examples/gcp/storage/gcs)               |
+| Filestore with Terraform                  | [here](/examples/gcp/storage/filestore)         |
+
+#### Messaging
+| Description                               | Folder                                          |
+| ----------------------------------------- | ----------------------------------------------- |
+| Pubsub with Terraform                     | [here](/examples/gcp/messaging/pubsub)          |
 
 ### Azure Examples
 
